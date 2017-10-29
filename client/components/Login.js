@@ -1,6 +1,10 @@
 import React from 'react';
 import ProgressBar from 'react-progress-bar-plus';
 import 'react-progress-bar-plus/lib/progress-bar.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 
 
 
@@ -11,24 +15,44 @@ class Login extends React.Component {
         this.state = {
             data: {},
             isLoding: false,
-            hello: "Max Ha Zoem"
-        };
+            username:'',
+            password:'',
+            token: ''
+        }
     }
 
-   
-    
-
-
-  render() { 
-    
-    return (
+     render() {
+        return (
+          <div>
+            <MuiThemeProvider>
               <div>
-        <h1>Login </h1>
-      </div>
-    );
-  }
-}
+              <AppBar
+                 title="Login"
+               />
+               <TextField
+                 hintText="Enter your Username"
+                 floatingLabelText="Username"
+                 onChange = {(event,newValue) => this.setState({username:newValue})}
+                 />
+               <br/>
+                 <TextField
+                   type="password"
+                   hintText="Enter your Password"
+                   floatingLabelText="Password"
+                   onChange = {(event,newValue) => this.setState({password:newValue})}
+                   />
+                 <br/>
+                 <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+             </div>
+             </MuiThemeProvider>
+          </div>
+        );
+      }
+    }
+    const style = {
+     margin: 15,
+    };
+    export default Login;
 
-export default Login;
 
 
