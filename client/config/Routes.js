@@ -3,6 +3,7 @@ import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 import Main from '../components/Main.js';
 import Login from '../components/Login';
 import Register from '../components/RegisterModal';
+import KeyPad from '../components/KeyPad';
 
 
 const Routes = () => {

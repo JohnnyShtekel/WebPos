@@ -2,8 +2,10 @@ import React from 'react';
 import ProgressBar from 'react-progress-bar-plus';
 import 'react-progress-bar-plus/lib/progress-bar.css';
 import {login} from '../api/ClientApi'
-import '../assets/styles/mainContainer.css'
+import '../assets/styles/pos.css'
 import Menu from '../components/Menu'
+import KeyPad from '../components/KeyPad'
+import commands from '../assets/pictures/commands.png'
 
 class Main extends React.Component {
 
@@ -35,13 +37,15 @@ class Main extends React.Component {
   render() {
     let state = this.state.loginState;
     return (
-        <div className="vcontainer">
-            <div className="hcontainer">
-                 <div className="content">
-                     <ProgressBar percent={100} />
-                         <Menu/>
-                 </div>
-             </div>
+        <div className="pos">
+            <Menu/>
+                     <div className="box">
+                         <KeyPad/>
+                     </div>
+                    <div className="commads">
+                     </div>
+
+
         </div>
 
     );

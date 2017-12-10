@@ -1,0 +1,23 @@
+.pos {
+     height: 824px;
+     width: 1000px;
+     background-color: #dad7d7;
+    margin: 10px auto 10px 260px;
+    position: relative;
+
+}
+
+
+.box {
+    position: absolute;
+    /*Centering Method 2*/  margin: 200px 0 0 -2px;
+  left: 50%;
+}
+
+
+.commads {
+    position: absolute;
+    /*Centering Method 2*/  margin: 200px 0 0 -2px;
+    background-image: url("../pictures/commands.png");
+  left: 50%;
+}
